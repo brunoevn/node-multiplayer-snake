@@ -19,8 +19,8 @@ node ('Ubuntu-app-agent'){
     stage('Post-to-dockerhub') {
        sh 'echo Post-to-dockerhub'
     /* docker.withRegistry('https://registry.hub.docker.com', 'brunodevsecops') {
-            app.push("latest")*/
-        			}
+            app.push("latest")
+        			} */
          }
     stage('SECURITY-IMAGE-SCANNER'){
         sh 'echo SECURITY-IMAGE-SCANNER'
