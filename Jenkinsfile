@@ -5,7 +5,8 @@ node ('ubuntu-app-agent'){
        checkout scm
     }  
     stage('SAST'){
-        build 'SECURITY-SAST-SNYK'
+        sh 'echo SAST'
+        /*build 'SECURITY-SAST-SNYK'*/
     }
 
     
