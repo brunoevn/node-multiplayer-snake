@@ -15,13 +15,13 @@ node ('ubuntu-app-agent'){
          * docker build on the command line */
         
         sh 'echo Build-And-Tag'
-     /*   app = docker.build("brunodevsecops/snake")*/
+        app = docker.build("brunodevsecops/snake")
     }
     stage('Post-to-dockerhub') {
        sh 'echo Post-to-dockerhub'
-    /* docker.withRegistry('https://registry.hub.docker.com', 'brunodevsecops') {
+     docker.withRegistry('https://registry.hub.docker.com', 'brunodevsecops') {
             app.push("latest")
-        			} */
+        			} 
          }
     stage('SECURITY-IMAGE-SCANNER'){
         sh 'echo SECURITY-IMAGE-SCANNER'
